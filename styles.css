@@ -1,0 +1,376 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url(ressources/fonts/Raleway/static/Raleway-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Ralewaybold';
+    src: url(ressources/fonts/Raleway/static/Raleway-Bold.ttf) format('truetype');
+}
+
+html {
+    --red: #c80000;
+    --grey: #666;
+    --greyw: #ccc;
+    --white: #fff;
+    --font: 'Raleway';
+    --fontbold: 'Ralewaybold'
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: var(--font), Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+.header {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    height: 6.2rem;
+    color: var(--white);
+}
+
+/* HEADER RED */
+
+.headerRed {
+    background-color: var(--red);
+    height: 64%;
+    display: flex;
+    align-items: baseline;
+    padding: 1rem;
+
+}
+
+.headerLogo{
+    font-family: var(--fontbold);
+    font-size: 2rem;
+}
+
+.headerSouslogo{
+    font-family: var(--fontbold);
+    font-size: 0.75rem;
+    padding-left: 0.5rem;
+}
+
+
+/* HEADER GRIS */
+
+.headerSoustitre {
+    background-color: var(--grey);
+    height: 36%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-block-end: 0.6rem;
+}
+
+.headerSoustitreEmphaz {
+    font-style: italic;
+    padding-left: 0.3rem;
+    font-size: 1.3rem;
+}
+
+
+
+.popin{
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 2rem;
+    background-color: var(--red);
+    color: var(--white);
+    text-transform: uppercase;
+    font-family: var(--fontbold);
+    font-size: 0.75rem;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    padding: 0.7rem;
+    letter-spacing: -0.15rem;
+    border-radius: 0% 20% 20% 0% / 0% 8% 8% 0% ;
+}
+
+/* LIST ARTICLES */
+
+.listfigurine {
+    /* height: calc(100vh - (6.2rem + 2rem)); */
+    padding: 7.6rem 0 3.4rem;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0.6rem;
+    column-gap: 1.2rem;
+}
+
+/* ARTICLE */
+
+.listfigurineArticle{
+    width: 16rem;
+    height: 26.3rem;
+    border: solid 1px var(--greyw);
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* ARTICLES DETAILS */
+
+.promosticker{
+    position: absolute;
+    top:0.6rem;
+    right: 0.6rem;
+    background-color: var(--grey);
+    color: var(--white);
+    font-family: var(--fontbold);
+    font-size: 1.4rem;
+    border : solid 0.3rem var(--greyw);
+    width: 4.25rem;
+    height: 4.25rem;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listfigurineArticleImg{
+    width: 95%;
+    align-self: center;
+}
+
+.listfigurineArticleCaption{
+    text-transform: uppercase;
+    color: var(--greyw);
+    font-size: 0.72rem;
+    padding: 0 0.4rem 0.25rem 0.4rem;
+    /* margin-bottom: 0.5rem; */
+    border-bottom: solid 1px var(--greyw);
+}
+
+.listfigurineArticleName, .listfigurineArticleCaption{
+    font-family: var(--fontbold);
+}
+
+.listfigurineArticleName{
+    font-size: 1.325rem;
+    padding-bottom: 0.3rem;
+
+}
+
+.listfigurineArticleDescription, .listfigurineArticleName{
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+.listfigurineArticleDescription{
+    text-align: justify;
+    padding-bottom: 0.6rem;
+
+}
+
+.listfigurineArticleAddcart{
+    background-color: var(--red);
+    color: var(--white);
+    height: 2.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.listfigurineArticlePanier, .sold, .listfigurineArticleDescription{
+    font-size: 0.8rem;
+}
+
+.listfigurineArticlePrice{
+    font-family: var(--fontbold);
+}
+
+.sold{
+    font-family: var(--font);
+    text-decoration: line-through;
+}
+
+.listfigurineArticleLink{
+    text-decoration: none;
+}
+
+
+/* CART & FORMULAIRE */
+
+.section{
+    padding: 8.2rem 0 3rem;
+    margin: 0 auto;
+    width: 38rem;
+}
+
+.cartForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+/* CART */
+
+h4{
+    font-size: 1.325rem;
+    font-family: var(--fontbold);
+}
+
+.cartTable{
+    margin: 1.7rem auto 1rem;
+    box-shadow: 2px 4px 10px -1px var(--greyw);;
+}
+
+.cartTableHead{
+    border-bottom: 1px solid var(--greyw);
+    font-family: var(--fontbold);
+    font-size: 1.15rem;
+}
+
+td, th{
+    width: 12rem;
+    height: 2.5rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.cartTableBody input{
+    width: 2.5rem;
+    height: 1.2rem;
+}
+
+.cartTableBody a{
+    color: var(--red);
+    font-size: 0.6rem;
+    text-decoration: underline;
+}
+
+.payit{
+    font-family: var(--fontbold);
+}
+
+.cartTableFoot td:nth-of-type(2), .payitred{
+    color: var(--red);
+    font-size: 1.6rem;
+}
+
+.cartTableFoot td:nth-of-type(2){
+    height: 3rem;
+}
+
+tbody tr:nth-child(2n+1){
+    background-color: var(--greyww);
+}
+
+/* DELIVERY */
+
+.h4Delivery{
+    border-top: 1px solid var(--greyw);
+    padding: 1rem 0 0.8rem;
+}
+
+.boxDelivery{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem 2rem;
+    border-bottom: 1px solid var(--greyw);
+}
+
+.delivery{
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery label {
+    font-size: 0.85rem;
+}
+
+.delivery legend{
+    font-family: var(--fontbold);
+    color: var(--grey);
+    padding: 1.7rem 0 1.7rem 0;
+}
+
+.radio, .check{
+    padding: 0.2rem 0;
+}
+
+.boxDeliveryRight label{
+    padding: 0.3rem 0;
+}
+
+input[type="text"], textarea{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid var(--greyw);
+    background-color: var(--greyww);
+    height: 1.85rem;
+}
+
+textarea{
+    height: 3rem;
+}
+
+/* MONTANT */
+
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    margin: 1rem;
+    vertical-align: middle;
+    box-shadow: 2px 4px 10px -1px var(--greyw);;
+}
+
+/* BUTTON */
+
+.buttons{
+    border-bottom: 1px solid var(--greyw);
+    border-top: 1px solid var(--greyw);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button, .buttons input{
+    border: none;
+    background-color: var(--greyww);
+    padding: 1rem 2rem;
+    font-family: var(--fontbold);
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+}
+
+.buttons input{
+    background-color: var(--red);
+    color: var(--white);
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+
+.footer {
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    color: var(--white);
+    background-color: var(--grey);
+    text-align: center;
+    font-size: 0.85rem;
+    padding-top: 0.5%;
+}

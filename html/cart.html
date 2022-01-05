@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fig'oStore</title>
+    <meta name="description" content="Site de vente de figurine sur Final Fantasy VII">
+    <link rel="stylesheet" href="../zreset.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="../index.html" class="headerRed listfigurineArticleLink">
+            <h1 class="headerLogo">Fig'oStore</h1>
+            <h2 class="headerSouslogo">Figurines et statuettes</h2>
+        </a>
+        <h3 class="headerSoustitre">Votre panier <em class="headerSoustitreEmphaz">2 produits</em></h3>
+    </header>
+
+        <div class="popin">soldes</div>
+
+    <section class="section">
+
+
+        <form id="formCart" action="" method="get">
+            <article class="cartForm">
+
+                    <h4>Votre panier</h4>
+
+                <article class="cart">
+                    <div class="table">
+                        <table class="cartTable">
+                            <thead class="cartTableHead">
+                                <tr>
+                                    <th>Figurine</th>
+                                    <th>Prix unitaire</th>
+                                    <th>Quantité</th>
+                                </tr>
+                            </thead>
+                            <tbody class="cartTableBody">
+                                <tr>
+                                    <td>Cloud Strife</td>
+                                    <td>59 €</td>
+                                    <td>
+                                        <input type="number" id="numArt1" name="number1" min="0" max="99">
+                                        <a href="#">supprimer</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tifa Lockhart</td>
+                                    <td>69 €</td>
+                                    <td>
+                                        <input type="number" id="numArt2" name="number2" min="0" max="99">
+                                        <a href="#">supprimer</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Barret Wallace</td>
+                                    <td>69 €</td>
+                                    <td>
+                                        <input type="number" id="numArt3" name="number3" min="0" max="99">
+                                        <a href="#">supprimer</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot class="cartTableFoot">
+                                <tr>
+                                    <td class="payit" colspan="2">Total de la commande :</td>
+                                    <td class="payit payitred">197€</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </article>
+
+                    <h4 class="h4Delivery">Préférences de livraison</h4>
+
+                <article class="boxDelivery">
+                    <div class="boxDeliveryLeft">
+                        <fieldset class="delivery">
+                            <legend>Où souhaitez-vous être livré ?</legend>
+                            <div class="radio">
+                                <input type="radio" name="Adress" id="currentAdress" value="currentAdress">
+                                <label for="currentAdress">Mon adresse courante</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="Adress" id="otherAdress" value="otherAdress" checked>
+                                <label for="otherAdress">Autre adresse</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="delivery">
+                            <legend>Options</legend>
+                            <div class="check">
+                                <input type="checkbox" name="tracking" id="tracking" value="tracking" checked>
+                                <label for="tracking">Suivi de livraison par sms (inclus)</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="satisfy" id="satisfy" value="satisfy">
+                                <label for="satisfy">Satisfait ou remboursé (+ 2 euros)</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="warranty" id="warranty" value="warranty">
+                                <label for="warranty">Garantie 2 ans (+ 10 euros)</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="boxDeliveryRight">
+                        <fieldset class="delivery">
+                            <legend>Adresse</legend>
+                            <label for="street">Rue</label>
+                            <input type="text" name="street" id="street">
+                            <label for="cp">Code postal</label>
+                            <input type="text" name="cp" id="cp">
+                            <label for="city">Ville</label>
+                            <input type="text" name="city" id="city">
+                        </fieldset>
+                        <fieldset class="delivery">
+                            <legend>Informations complémentaires</legend>
+                            <label for="info">interphone, bâtiment, etc.</label>
+                            <textarea name="info" id="info"></textarea>
+                        </fieldset>
+                    </div>
+                </article>
+
+                <article class="boxTotal">
+                    <div class="total">
+                        <p class="payit">Montant total à régler :</p>
+                        <p class="payit payitred">197 €</p>
+                    </div>
+                </article>
+
+                <article class="boxButtons">
+                    <div class="buttons">
+                        <button>
+                            <a class="listfigurineArticleLink" href="../index.html">Continuer vos achats</a>
+                        </button>
+                        <input type="submit" value="Valider et payer">
+                    </div>
+                </article>
+            </article>
+
+        </form>
+
+    </section>
+
+    <footer class="footer">
+        <div class="croixBezier"></div>
+        <p>Fig'oStore - toutes les images sont sous copyright SquareEnix</p>
+    </footer>
+
+</body>
+
+</html>
